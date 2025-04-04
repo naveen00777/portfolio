@@ -645,9 +645,16 @@ nav .container {
 .skill-card:nth-child(11) { animation-delay: 1.1s; }
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
         gap: 20px;
     }
 
@@ -661,15 +668,18 @@ nav .container {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    .skills-section {
+        padding: 70px 0;
+    }
+
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns on small screens */
         gap: 15px;
     }
 
     .skill-card {
         padding: 20px 10px;
-        animation-duration: 0.4s;
     }
 
     .skill-icon {
@@ -677,10 +687,20 @@ nav .container {
         height: 40px;
         margin-bottom: 10px;
     }
-}
+
+    .skill-card h3 {
+        font-size: 0.85rem;
+    }
+
     /* Faster animations on mobile */
     .skill-card {
         animation-duration: 0.4s;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
     }
 }
 
