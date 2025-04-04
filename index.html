@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Cursor -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!-- Nav -->
+<nav>
+    <div class="container">
+        <div class="logo">
+            <span>Naveen </span>Kumar N
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1uoWNNq3rhBJXkR_IeXjQQDlK9OTxgbJi/view?usp=sharing" class="resume-link" target="_blank">Resume <i class="fas fa-external-link-alt"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="gradient-text">NAVEEN KUMAR N</span></h1>
+                <div class="typing-wrapper">
+                    <p>I'm a <span class="typing"></span></p>
+                </div>
+                <p class="hero-desc">Transforming ideas into digital realities through elegant code and innovative design.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">View Work</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/naveen00777" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/naveen-kumar-n-296672205/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:naveennirmal77@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="Photo formal green.jpg" alt="Your Profile Photo">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-title-small">About Me</span>
+            <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Hello! I'm a <strong>Full Stack Developer</strong> with expertise in creating responsive and intuitive web applications. With a passion for clean code and user-centered design, I transform complex problems into elegant solutions.</p>
+                <p>My journey in tech began when I discovered the power of creating something from nothing but lines of code. Since then, I've been on a continuous path of learning and growth, staying updated with the latest technologies and best practices.</p>
+                <p>I believe in the power of technology to solve real-world problems and create meaningful experiences. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge through mentoring and community involvement.</p>
+                <div class="about-buttons">
+                    <a href="#contact" class="btn primary">Contact Me</a>
+                    <a href="https://drive.google.com/file/d/1uoWNNq3rhBJXkR_IeXjQQDlK9OTxgbJi/view?usp=drive_link" class="btn secondary" target="_blank">Download CV</a>
+                </div>
+            </div>
+            <div class="about-stats">
+<!--                <div class="stat-box">
+                    <span class="stat-number count" data-count="5">5</span>
+                   <span class="stat-label">Years Experience</span>
+               </div>-->
+                <div class="stat-box">
+                    <span class="stat-number count" data-count="3">3</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+<!--                <div class="stat-box">-->
+<!--                    <span class="stat-number count" data-count="15">15</span>-->
+<!--                    <span class="stat-label">Happy Clients</span>-->
+<!--                </div>-->
+<!--                <div class="stat-box">-->
+<!--                    <span class="stat-number count" data-count="10">10</span>-->
+<!--                    <span class="stat-label">Awards Received</span>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-title-small">My Skills</span>
+            <h2 class="section-title">Technical Expertise</h2>
+        </div>
+
+        <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                    <img src="java.png" alt="Java">
+                </div>
+                <h3>Java</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <img src="spring.png" alt="Spring">
+                </div>
+                <h3>Spring</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <img src="React.webp" alt="React">
+                </div>
+                <h3>React</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                    <img src="js.webp" alt="JavaScript">
+                </div>
+                <h3>JavaScript</h3>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                    <img src="mysql.webp" alt="MySQL">
+                </div>
+                <h3>MySQL</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <img src="postsql.webp" alt="PostgreSQL">
+                </div>
+                <h3>PostgreSQL</h3>
+            </div>
+
+            <!-- Version Control -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <img src="git.png" alt="Git">
+                </div>
+                <h3>Git</h3>
+            </div>
+            <!-- Frontend -->
+            <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                    <img src="html.webp" alt="HTML">
+                </div>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <img src="css.webp" alt="CSS">
+                </div>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <img src="boot.png" alt="Bootstrap">
+                </div>
+                <h3>Bootstrap</h3>
+            </div>
+
+            <!-- Design -->
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                    <img src="uiux.png" alt="UI/UX">
+                </div>
+                <h3>UI/UX</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tools" class="tools">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-title-small">My Toolkit</span>
+            <h2 class="section-title">Tools I Use</h2>
+        </div>
+        <div class="tools-grid">
+            <!-- Version Control -->
+            <div class="tool-item" data-tool="github">
+                <div class="tool-logo">
+                    <img src="github.webp" alt="GitHub" loading="lazy">
+                </div>
+                <span>GitHub</span>
+            </div>
+
+            <!-- IDEs -->
+            <div class="tool-item" data-tool="intellij">
+                <div class="tool-logo">
+                    <img src="intellij.png" alt="IntelliJ IDEA" loading="lazy">
+                </div>
+                <span>IntelliJ</span>
+            </div>
+
+            <div class="tool-item" data-tool="vscode">
+                <div class="tool-logo">
+                    <img src="vscode.png" alt="VS Code" loading="lazy">
+                </div>
+                <span>VS Code</span>
+            </div>
+
+            <!-- Design -->
+            <div class="tool-item" data-tool="figma">
+                <div class="tool-logo">
+                    <img src="figma.png" alt="Figma" loading="lazy">
+                </div>
+                <span>Figma</span>
+            </div>
+
+            <!-- Package Managers -->
+            <div class="tool-item" data-tool="npm">
+                <div class="tool-logo">
+                    <img src="npm.png" alt="NPM" loading="lazy">
+                </div>
+                <span>NPM</span>
+            </div>
+
+            <!-- Database Tools -->
+            <div class="tool-item" data-tool="sqlworkbench">
+                <div class="tool-logo">
+                    <img src="sqlwb.png" alt="SQL Workbench" loading="lazy">
+                </div>
+                <span>SQL Workbench</span>
+            </div>
+
+            <div class="tool-item" data-tool="pgadmin">
+                <div class="tool-logo">
+                    <img src="postsql.webp" alt="pgAdmin" loading="lazy">
+                </div>
+                <span>pgAdmin</span>
+            </div>
+
+            <!-- API Tools -->
+            <div class="tool-item" data-tool="postman">
+                <div class="tool-logo">
+                    <img src="postman.png" alt="Postman" loading="lazy">
+                </div>
+                <span>Postman</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificate Section -->
+<section id="certificates" class="certificates">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-title-small">Achievements</span>
+            <h2 class="section-title">My Certificates</h2>
+        </div>
+        <div class="certificates-slider">
+            <div class="certificates-track">
+                <!-- Original certificates -->
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1vCDqbL5WhU-KpaZ6q0noEo47TuGu07Bm/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate learn java.jpg" alt="Certificate 1" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1pFVWX5BXkhzz5dhdLk-r6KMips1rtsTA/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate html.jpg" alt="Certificate 2" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1-vmdi9mTHazibieKfPeSzqxuuUCzvJOt/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate css.jpg" alt="Certificate 3" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1G5jOM92HcEikwpKLGxItNxSVGDFMRV8M/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate bootstrap.jpg" alt="Certificate 4" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1gF044L6LaJdKA_ts36ks_O2LerXfNY-F/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate js.jpg" alt="Certificate 5" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1nebheg97dcldFmMwCtqYInsKm1Ccg_s8/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate react.jpg" alt="Certificate 6" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1Mk-i_GregRqGgSJ3euofk1F5BXfz5s5R/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate spring.jpg" alt="Certificate 7" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/15eFcaXs5qmFL45_a312D1gYjhytKWopw/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate git and hub.jpg" alt="Certificate 8" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1gDzv8o280bI9FtgVS6jNvw1mOQq6xr8d/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate sql.jpg" alt="Certificate 9" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Duplicate all certificates for smooth infinite scroll -->
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1vCDqbL5WhU-KpaZ6q0noEo47TuGu07Bm/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate learn java.jpg" alt="Certificate 1" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1pFVWX5BXkhzz5dhdLk-r6KMips1rtsTA/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate html.jpg" alt="Certificate 2" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1-vmdi9mTHazibieKfPeSzqxuuUCzvJOt/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate css.jpg" alt="Certificate 3" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1G5jOM92HcEikwpKLGxItNxSVGDFMRV8M/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate bootstrap.jpg" alt="Certificate 4" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1gF044L6LaJdKA_ts36ks_O2LerXfNY-F/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate js.jpg" alt="Certificate 5" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1nebheg97dcldFmMwCtqYInsKm1Ccg_s8/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate react.jpg" alt="Certificate 6" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1Mk-i_GregRqGgSJ3euofk1F5BXfz5s5R/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate spring.jpg" alt="Certificate 7" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/15eFcaXs5qmFL45_a312D1gYjhytKWopw/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate git and hub.jpg" alt="Certificate 8" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://drive.google.com/file/d/1gDzv8o280bI9FtgVS6jNvw1mOQq6xr8d/view?usp=sharing" target="_blank" class="certificate-link">
+                        <img src="certificate sql.jpg" alt="Certificate 9" loading="lazy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate-btn">View Certificate</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-title-small">My Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web App</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="ecommerce.jpg" alt="E-commerce Dashboard">
+                    <div class="overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Dashboard</h3>
+                    <p>A comprehensive dashboard for e-commerce businesses with real-time analytics and inventory management.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Chart.js</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <div class="project-img">
+                    <img src="/api/placeholder/600/400" alt="Fitness Tracker App">
+                    <div class="overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Fitness Tracker App</h3>
+                    <p>A mobile application that tracks workouts, nutrition, and provides personalized fitness recommendations.</p>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Redux</span>
+                        <span>Expo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="/api/placeholder/600/400" alt="Real-time Chat Platform">
+                    <div class="overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Real-time Chat Platform</h3>
+                    <p>A real-time messaging platform with features like group chats, file sharing, and end-to-end encryption.</p>
+                    <div class="project-tech">
+                        <span>Socket.io</span>
+                        <span>Vue.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <div class="project-img">
+                    <img src="/api/placeholder/600/400" alt="Travel App UI/UX Design">
+                    <div class="overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Travel App UI/UX Design</h3>
+                    <p>A modern and intuitive user interface design for a travel booking application with interactive prototypes.</p>
+                    <div class="project-tech">
+                        <span>Figma</span>
+                        <span>Adobe XD</span>
+                        <span>Illustrator</span>
+                        <span>Photoshop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-cta">
+            <a href="https://github.com/yourusername" class="btn primary" target="_blank">See All Projects <i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-title-small">Get In Touch</span>
+            <h2 class="section-title">Contact Me</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-info-card">
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>naveennirmal77@gmail.com</p>
+                            <a href="mailto:naveennirmal77@gmail.com" class="contact-link">Send an email</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 9620908049</p>
+                            <a href="tel:+919620908049" class="contact-link">Call me</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/naveen-kumar-n-296672205/</p>
+                            <a href="https://www.linkedin.com/in/naveen-kumar-n-296672205/" class="contact-link" target="_blank">Connect with me</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-box">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/naveen00777</p>
+                            <a href="https://github.com/naveen00777" class="contact-link" target="_blank">Check my repos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-image-container">
+                <div class="contact-image">
+                    <img src="contact.png" alt="Contact Image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>Naveen </span>kumar N
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/naveen00777" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/naveen-kumar-n-296672205/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Your Name. All rights reserved.</p>
+            <p>Designed and built with <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+    <div class="back-to-top">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+    // Custom cursor
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+
+        setTimeout(() => {
+            cursorFollower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        }, 80);
+    });
+
+    // Links and buttons cursor effect
+    const links = document.querySelectorAll('a, button, .tool-item, .project-card');
+
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('cursor-active');
+            cursorFollower.classList.add('cursor-active');
+        });
+
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('cursor-active');
+            cursorFollower.classList.remove('cursor-active');
+        });
+    });
+
+    // Mobile navigation
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+        });
+    });
+
+    // Typing animation
+    if (document.querySelector('.typing')) {
+        const typed = new Typed('.typing', {
+            strings: ['Full Stack Developer', 'Java Developer', 'Problem Solver', 'Tech Enthusiast'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    }
+
+    // UPDATED: Certificate slider using CSS animation
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if we have the certificate slider from HTML structure
+        const certificatesTrack = document.querySelector('.certificates-track');
+
+        if (certificatesTrack) {
+            // CSS-based animation is already in place via styles
+
+            // Function to check and reset animation if needed to prevent delays
+            function checkCertificateAnimation() {
+                // Get computed style
+                const style = window.getComputedStyle(certificatesTrack);
+                const transform = style.getPropertyValue('transform');
+
+                // If transform is causing a delay or jump, reset it
+                if (transform !== 'none' && transform.includes('matrix')) {
+                    try {
+                        const matrix = new DOMMatrix(transform);
+                        const translateX = matrix.m41;
+
+                        // Get total width of original certificates
+                        const certificateItems = document.querySelectorAll('.certificate-item');
+                        const itemWidth = certificateItems[0].offsetWidth + parseInt(style.getPropertyValue('margin-right'));
+                        const originalItemsCount = certificateItems.length / 2; // Half of total count (original set)
+
+                        // If we've scrolled almost to the end of original items
+                        if (Math.abs(translateX) >= (itemWidth * originalItemsCount * 0.95)) {
+                            // Smoothly reset animation
+                            certificatesTrack.style.transition = 'none';
+                            certificatesTrack.style.transform = 'translateX(0)';
+
+                            // Force reflow
+                            certificatesTrack.offsetHeight;
+
+                            // Restart animation
+                            certificatesTrack.style.transition = '';
+                            certificatesTrack.style.animation = 'none';
+                            certificatesTrack.offsetHeight; // Trigger reflow
+                            certificatesTrack.style.animation = 'scroll 30s linear infinite';
+                        }
+                    } catch (e) {
+                        console.log('Certificate animation check error:', e);
+                    }
+                }
+            }
+
+            // Check periodically
+            setInterval(checkCertificateAnimation, 1000);
+        }
+        // If using Swiper (from your JS code)
+        else if (document.querySelector('.certificate-swiper')) {
+            const certificateSwiper = new Swiper('.certificate-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                speed: 1000,
+                loop: true,
+                loopAdditionalSlides: 9, // Add extra slides for smoother infinite loop
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        }
+    });
+
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (filterBtns.length && projectCards.length) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // Counter animation
+    const counters = document.querySelectorAll('.count');
+    const speed = 200;
+
+    function runCounter() {
+        counters.forEach(counter => {
+            const target = +counter.dataset.count;
+            let count = 0;
+            const increment = target / speed;
+
+            const updateCount = () => {
+                if (count < target) {
+                    count += increment;
+                    counter.textContent = Math.ceil(count);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+
+            updateCount();
+        });
+    }
+
+    // Intersection Observer for animations and counters
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('about-stats')) {
+                    runCounter();
+                }
+                if (entry.target.classList.contains('skill-card') ||
+                    entry.target.classList.contains('section-title') ||
+                    entry.target.classList.contains('section-title-small')) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements
+    document.querySelectorAll('.about-stats, .skill-card, .skills-section .section-title, .skills-section .section-title-small').forEach(el => {
+        if (el.classList.contains('skill-card') ||
+            el.classList.contains('section-title') ||
+            el.classList.contains('section-title-small')) {
+            el.style.animationPlayState = 'paused';
+        }
+        observer.observe(el);
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Active menu on scroll
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.menu a');
+
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - 100) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally handle the form submission with AJAX
+            // For a simple demo, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    }
+
+    // Back to top button visibility
+    window.addEventListener('scroll', function() {
+        const backToTop = document.querySelector('.back-to-top');
+        if (backToTop) {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        }
+    });
+</script>
+</body>
+</html>
