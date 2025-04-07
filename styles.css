@@ -124,32 +124,37 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== CUSTOM CURSOR ===== */
 .cursor {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--accent-primary);
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.2s ease;
     transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
 }
 
 .cursor-follower {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid var(--accent-primary);
     pointer-events: none;
     z-index: 9998;
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 .cursor-active {
     transform: translate(-50%, -50%) scale(1.5);
     background-color: transparent;
 }
+
 
 /* ===== BUTTONS ===== */
 .btn {

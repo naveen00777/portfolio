@@ -217,7 +217,7 @@
             <!-- Version Control -->
             <div class="tool-item" data-tool="github">
                 <div class="tool-logo">
-                    <img src="github.webp" alt="GitHub" loading="lazy">
+                    <img src="github.png" alt="GitHub" loading="lazy">
                 </div>
                 <span>GitHub</span>
             </div>
@@ -451,10 +451,31 @@
         <div class="project-filters">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="web">Web App</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
+<!--            <button class="filter-btn" data-filter="mobile">Mobile</button>-->
             <button class="filter-btn" data-filter="design">Design</button>
         </div>
         <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="project2 skilloop.jpg" alt="Skilloop-skill exchange website">
+                    <div class="overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Skilloop-skill exchange website</h3>
+                    <p>A web app connecting users to exchange skills through profiles, listings, messaging, and smart matching.</p>
+                    <div class="project-tech">
+                        <span>React js</span>
+                        <span>SpringBoot</span>
+                        <span>Spring</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </div>
             <div class="project-card" data-category="web">
                 <div class="project-img">
                     <img src="ecommerce.jpg" alt="E-commerce Dashboard">
@@ -469,58 +490,15 @@
                     <h3>E-commerce Dashboard</h3>
                     <p>A comprehensive dashboard for e-commerce businesses with real-time analytics and inventory management.</p>
                     <div class="project-tech">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Chart.js</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="mobile">
-                <div class="project-img">
-                    <img src="/api/placeholder/600/400" alt="Fitness Tracker App">
-                    <div class="overlay">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Fitness Tracker App</h3>
-                    <p>A mobile application that tracks workouts, nutrition, and provides personalized fitness recommendations.</p>
-                    <div class="project-tech">
-                        <span>React Native</span>
-                        <span>Firebase</span>
-                        <span>Redux</span>
-                        <span>Expo</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="web">
-                <div class="project-img">
-                    <img src="/api/placeholder/600/400" alt="Real-time Chat Platform">
-                    <div class="overlay">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Real-time Chat Platform</h3>
-                    <p>A real-time messaging platform with features like group chats, file sharing, and end-to-end encryption.</p>
-                    <div class="project-tech">
-                        <span>Socket.io</span>
-                        <span>Vue.js</span>
-                        <span>Express</span>
-                        <span>MongoDB</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
                     </div>
                 </div>
             </div>
             <div class="project-card" data-category="design">
                 <div class="project-img">
-                    <img src="/api/placeholder/600/400" alt="Travel App UI/UX Design">
+                    <img src="figma design.png" alt="Travel App UI/UX Design">
                     <div class="overlay">
                         <div class="project-links">
                             <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
@@ -533,9 +511,6 @@
                     <p>A modern and intuitive user interface design for a travel booking application with interactive prototypes.</p>
                     <div class="project-tech">
                         <span>Figma</span>
-                        <span>Adobe XD</span>
-                        <span>Illustrator</span>
-                        <span>Photoshop</span>
                     </div>
                 </div>
             </div>
@@ -612,7 +587,7 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <span>Naveen </span>kumar N
+                <span>Naveen </span>Kumar N
             </div>
             <div class="footer-links">
                 <a href="#home">Home</a>
@@ -653,279 +628,286 @@
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
 
+    // Cursor movement tracking
     document.addEventListener('mousemove', (e) => {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        const x = e.clientX;
+        const y = e.clientY;
 
-        setTimeout(() => {
-            cursorFollower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        }, 80);
+        // Immediate movement for main cursor
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+
+        // Smooth follow effect using requestAnimationFrame
+        requestAnimationFrame(() => {
+            cursorFollower.style.transform = `translate(${x}px, ${y}px)`;
+        });
     });
 
-    // Links and buttons cursor effect
-    const links = document.querySelectorAll('a, button, .tool-item, .project-card');
+    // Interactive hover effect on links, buttons, etc.
+    const hoverTargets = document.querySelectorAll('a, button, .tool-item, .project-card');
 
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
+    hoverTargets.forEach(el => {
+        el.addEventListener('mouseenter', () => {
             cursor.classList.add('cursor-active');
             cursorFollower.classList.add('cursor-active');
         });
 
-        link.addEventListener('mouseleave', () => {
+        el.addEventListener('mouseleave', () => {
             cursor.classList.remove('cursor-active');
             cursorFollower.classList.remove('cursor-active');
         });
     });
 
-    // Mobile navigation
-    const hamburger = document.querySelector('.hamburger');
-    const menu = document.querySelector('.menu');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        menu.classList.toggle('active');
-    });
+        // Mobile navigation
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            menu.classList.remove('active');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
         });
-    });
 
-    // Typing animation
-    if (document.querySelector('.typing')) {
-        const typed = new Typed('.typing', {
-            strings: ['Full Stack Developer', 'Java Developer', 'Problem Solver', 'Tech Enthusiast'],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
+        // Close menu when clicking a link
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
         });
-    }
 
-    // UPDATED: Certificate slider using CSS animation
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check if we have the certificate slider from HTML structure
-        const certificatesTrack = document.querySelector('.certificates-track');
+        // Typing animation
+        if (document.querySelector('.typing')) {
+            const typed = new Typed('.typing', {
+                strings: ['Full Stack Developer', 'Java Developer', 'Problem Solver', 'Tech Enthusiast'],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true
+            });
+        }
 
-        if (certificatesTrack) {
-            // CSS-based animation is already in place via styles
+        // UPDATED: Certificate slider using CSS animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if we have the certificate slider from HTML structure
+            const certificatesTrack = document.querySelector('.certificates-track');
 
-            // Function to check and reset animation if needed to prevent delays
-            function checkCertificateAnimation() {
-                // Get computed style
-                const style = window.getComputedStyle(certificatesTrack);
-                const transform = style.getPropertyValue('transform');
+            if (certificatesTrack) {
+                // CSS-based animation is already in place via styles
 
-                // If transform is causing a delay or jump, reset it
-                if (transform !== 'none' && transform.includes('matrix')) {
-                    try {
-                        const matrix = new DOMMatrix(transform);
-                        const translateX = matrix.m41;
+                // Function to check and reset animation if needed to prevent delays
+                function checkCertificateAnimation() {
+                    // Get computed style
+                    const style = window.getComputedStyle(certificatesTrack);
+                    const transform = style.getPropertyValue('transform');
 
-                        // Get total width of original certificates
-                        const certificateItems = document.querySelectorAll('.certificate-item');
-                        const itemWidth = certificateItems[0].offsetWidth + parseInt(style.getPropertyValue('margin-right'));
-                        const originalItemsCount = certificateItems.length / 2; // Half of total count (original set)
+                    // If transform is causing a delay or jump, reset it
+                    if (transform !== 'none' && transform.includes('matrix')) {
+                        try {
+                            const matrix = new DOMMatrix(transform);
+                            const translateX = matrix.m41;
 
-                        // If we've scrolled almost to the end of original items
-                        if (Math.abs(translateX) >= (itemWidth * originalItemsCount * 0.95)) {
-                            // Smoothly reset animation
-                            certificatesTrack.style.transition = 'none';
-                            certificatesTrack.style.transform = 'translateX(0)';
+                            // Get total width of original certificates
+                            const certificateItems = document.querySelectorAll('.certificate-item');
+                            const itemWidth = certificateItems[0].offsetWidth + parseInt(style.getPropertyValue('margin-right'));
+                            const originalItemsCount = certificateItems.length / 2; // Half of total count (original set)
 
-                            // Force reflow
-                            certificatesTrack.offsetHeight;
+                            // If we've scrolled almost to the end of original items
+                            if (Math.abs(translateX) >= (itemWidth * originalItemsCount * 0.95)) {
+                                // Smoothly reset animation
+                                certificatesTrack.style.transition = 'none';
+                                certificatesTrack.style.transform = 'translateX(0)';
 
-                            // Restart animation
-                            certificatesTrack.style.transition = '';
-                            certificatesTrack.style.animation = 'none';
-                            certificatesTrack.offsetHeight; // Trigger reflow
-                            certificatesTrack.style.animation = 'scroll 30s linear infinite';
+                                // Force reflow
+                                certificatesTrack.offsetHeight;
+
+                                // Restart animation
+                                certificatesTrack.style.transition = '';
+                                certificatesTrack.style.animation = 'none';
+                                certificatesTrack.offsetHeight; // Trigger reflow
+                                certificatesTrack.style.animation = 'scroll 30s linear infinite';
+                            }
+                        } catch (e) {
+                            console.log('Certificate animation check error:', e);
                         }
-                    } catch (e) {
-                        console.log('Certificate animation check error:', e);
                     }
                 }
-            }
 
-            // Check periodically
-            setInterval(checkCertificateAnimation, 1000);
-        }
-        // If using Swiper (from your JS code)
-        else if (document.querySelector('.certificate-swiper')) {
-            const certificateSwiper = new Swiper('.certificate-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                speed: 1000,
-                loop: true,
-                loopAdditionalSlides: 9, // Add extra slides for smoother infinite loop
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2,
+                // Check periodically
+                setInterval(checkCertificateAnimation, 1000);
+            }
+            // If using Swiper (from your JS code)
+            else if (document.querySelector('.certificate-swiper')) {
+                const certificateSwiper = new Swiper('.certificate-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    speed: 1000,
+                    loop: true,
+                    loopAdditionalSlides: 9, // Add extra slides for smoother infinite loop
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
-                    1024: {
-                        slidesPerView: 3,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        }
                     }
-                }
+                });
+            }
+        });
+
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        if (filterBtns.length && projectCards.length) {
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
             });
         }
-    });
 
-    // Project filtering
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+        // Counter animation
+        const counters = document.querySelectorAll('.count');
+        const speed = 200;
 
-    if (filterBtns.length && projectCards.length) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(btn => btn.classList.remove('active'));
+        function runCounter() {
+            counters.forEach(counter => {
+                const target = +counter.dataset.count;
+                let count = 0;
+                const increment = target / speed;
 
-                // Add active class to clicked button
-                btn.classList.add('active');
-
-                const filter = btn.dataset.filter;
-
-                // Filter projects
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.textContent = Math.ceil(count);
+                        requestAnimationFrame(updateCount);
                     } else {
-                        card.style.display = 'none';
+                        counter.textContent = target;
                     }
-                });
+                };
+
+                updateCount();
+            });
+        }
+
+        // Intersection Observer for animations and counters
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('about-stats')) {
+                        runCounter();
+                    }
+                    if (entry.target.classList.contains('skill-card') ||
+                        entry.target.classList.contains('section-title') ||
+                        entry.target.classList.contains('section-title-small')) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.about-stats, .skill-card, .skills-section .section-title, .skills-section .section-title-small').forEach(el => {
+            if (el.classList.contains('skill-card') ||
+                el.classList.contains('section-title') ||
+                el.classList.contains('section-title-small')) {
+                el.style.animationPlayState = 'paused';
+            }
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-    }
 
-    // Counter animation
-    const counters = document.querySelectorAll('.count');
-    const speed = 200;
+        // Active menu on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.menu a');
 
-    function runCounter() {
-        counters.forEach(counter => {
-            const target = +counter.dataset.count;
-            let count = 0;
-            const increment = target / speed;
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-            const updateCount = () => {
-                if (count < target) {
-                    count += increment;
-                    counter.textContent = Math.ceil(count);
-                    requestAnimationFrame(updateCount);
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would normally handle the form submission with AJAX
+                // For a simple demo, we'll just show an alert
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+
+        // Back to top button visibility
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (backToTop) {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
                 } else {
-                    counter.textContent = target;
+                    backToTop.classList.remove('show');
                 }
-            };
-
-            updateCount();
-        });
-    }
-
-    // Intersection Observer for animations and counters
-    const observerOptions = {
-        threshold: 0.5
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.classList.contains('about-stats')) {
-                    runCounter();
-                }
-                if (entry.target.classList.contains('skill-card') ||
-                    entry.target.classList.contains('section-title') ||
-                    entry.target.classList.contains('section-title-small')) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    // Observe elements
-    document.querySelectorAll('.about-stats, .skill-card, .skills-section .section-title, .skills-section .section-title-small').forEach(el => {
-        if (el.classList.contains('skill-card') ||
-            el.classList.contains('section-title') ||
-            el.classList.contains('section-title-small')) {
-            el.style.animationPlayState = 'paused';
-        }
-        observer.observe(el);
-    });
-
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Active menu on scroll
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.menu a');
-
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would normally handle the form submission with AJAX
-            // For a simple demo, we'll just show an alert
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    }
-
-    // Back to top button visibility
-    window.addEventListener('scroll', function() {
-        const backToTop = document.querySelector('.back-to-top');
-        if (backToTop) {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        }
-    });
 </script>
 </body>
 </html>
